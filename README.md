@@ -25,3 +25,39 @@ There are many options
 - We have a choice to decide the number of worker nodes, even to some extent we can control the worker node configuration
 - Slightly cheaper compared to AWS
 </pre>
+
+## Red Hat Openshift OS supported by Master and Worker Node
+<pre>
+- Until Openshift 3.11, we can install RHEL or any other Linux OS[RHEL] distribution in master and worker nodes
+- Starting from Openshift 4.x, we can only install Red Hat Enterprise Core OS (RHCOS) in master nodes
+- In worker nodes, we could choose between RHEL or RHCOS
+- Red Hat recommends using RHCOS in master and worker nodes
+- When we install RHCOS in master and worker nodes, we can upgrade Openshift using webconsole or oc command
+- RHCOS
+  - is an optimized OS which is created out of RHEL, optimized for container orchestration platforms
+  - it comes with pre-installed Podman and CRI-O container runtime
+  - it enforces many best practices
+  - if the best practices are not followed, simply many things won't work
+  - Ports below 1024 are reserved for openshift's internal use, user applications can't use these ports
+  - Many OS folders are given only read-only permission, writing to such folder will lead to Pod crash
+  - All the user applications are allowed only to run as non-admin user
+</pre>
+
+## Installing Red Hat Openshift in local server
+<pre>
+- is the tough compared to installing in public cloud ( production grade setup )
+- openshift local is the easiest of all, this is what we are going to do
+</pre>
+
+## How to install Openshift in local machine ( non-production setup ) with Code Ready Containers[CRC]
+<pre>
+- We need Red Hat Developer account which is free
+- It doesn't require credit card
+- With Red Hat Developer account we can evaluate free of cost
+  - Red Hat Enterprise Linux 
+  - Red Hat Ansible Tower ( called Ansible Automation Platform )
+  - or other Red Hat products
+- just your gmail is enough to create a free red hat developer account
+</pre>
+
+
