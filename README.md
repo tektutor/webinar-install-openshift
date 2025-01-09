@@ -71,3 +71,33 @@ Navigate to the below URL to download CRC and pull-secret file
 <pre>
 https://developers.redhat.com/products/openshift-local/getting-started  
 </pre>
+![image](https://github.com/user-attachments/assets/b8b8c810-b33e-47f5-97f0-044928304a22)
+
+When we click on "Install Openshift on your laptop", we get the below page
+![image](https://github.com/user-attachments/assets/46a34b30-09fe-469b-9235-82b0c906655e)
+
+Make sure you donwload the crc-linux-amd64.tar.xz or appropriate installer for your OS.  The pull-secret is required to download the necessary tools and container images while installing Openshift and after installing openshift as well.
+
+Red Hat will be able to track your usage based on the pull-secret.
+![image](https://github.com/user-attachments/assets/fd8d9b19-1c6a-4391-90e6-000c9d3b21f5)
+
+Let's extract and copy the crc binary to /usr/local/bin as admin user
+```
+cd ~/Downloads
+ls
+tar xvf crc-linux-amd64.tar.xz
+ls
+cd crc-linux-2.45.0-amd64/
+sudo cp crc /usr/local/bin
+ls -l /usr/local/bin/crc
+```
+![image](https://github.com/user-attachments/assets/587c53c9-82f3-477c-ade5-a2d1f1f927d0)
+
+Let's configure RAM and CPUs for Openshift
+```
+crc config set memory 32768
+crc config set cpus 8
+```
+![image](https://github.com/user-attachments/assets/343e2f39-cded-4f89-a8c9-ffcee6cf56c7)
+
+
