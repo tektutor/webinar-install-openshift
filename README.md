@@ -60,4 +60,14 @@ There are many options
 - just your gmail is enough to create a free red hat developer account
 </pre>
 
+We need to login to red hat developer account
+<pre>
+https://developers.redhat.com/  
+</pre>
 
+![image](https://github.com/user-attachments/assets/d731bc10-08a7-453c-8463-391f750065b4)
+
+Navigate to the below URL to download CRC and pull-secret file
+<pre>
+https://developers.redhat.com/products/openshift-local/getting-started  
+</pre>
